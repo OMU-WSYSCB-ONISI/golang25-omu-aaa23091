@@ -1,13 +1,15 @@
+
 package main
 
-import "fmt"
+import(
+	"fmt"
+	"net/http"
+	"time")
 
 func main() {
-	// Week 03: ここに課題のコードを記述してください
+	http.HandleFunc("/info", infohandler)
+	http.ListenAndServe(":8080",nil)
+}	// Week 04: ここに課題のコードを記述してください
 	// 詳細な課題内容はLMSで確認してください
-	
-	fmt.Println("Week 03 課題")
-	
-	// 以下に実装してください
-	
-}
+
+
