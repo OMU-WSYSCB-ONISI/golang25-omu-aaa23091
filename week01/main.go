@@ -1,9 +1,11 @@
 package main
+
 import (
 	"fmt"
 	"net/http"
 	"runtime"
 )
+
 func main() {
 	fmt.Printf("Go version: %s\n", runtime.Version())
 
@@ -13,4 +15,4 @@ func main() {
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Printf("Failed to launch server: %v", err)
 	}
-}   
+}
